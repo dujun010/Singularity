@@ -9,5 +9,8 @@
 	<classpathentry kind="lib" path="lib/ant.jar"/>
 	<classpathentry kind="lib" path="lib/poi-3.13-20150929.jar"/>
 	<classpathentry kind="lib" path="lib/poi-ooxml-3.13-20150929.jar"/>
+	<classpathentry kind="lib" path="lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="lib/jdom-2.0.6.jar"/>
+	<classpathentry kind="lib" path="lib/sax-2.0.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
