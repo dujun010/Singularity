@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<water>
+  <result>
+    <name>${name}</name>
+    <status>${status}</status>
+    <msg>${msg}</msg>
+    <items>
+      <item name="${itemName}" value="${itmeValue}"/>
+    </items>
+  </result>
+</water>

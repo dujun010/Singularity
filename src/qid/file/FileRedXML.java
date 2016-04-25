@@ -43,7 +43,7 @@ public class FileRedXML extends DefaultHandler{
 	public static void domReadFileXML(){
 		long lasting = System.currentTimeMillis();
 		try {
-			File f = new File("D:\\waterSend\\parameter.xml");
+			File f = new File("D:\\parameter.xml");
 			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder builder = factory.newDocumentBuilder();
 			Document doc = builder.parse(f);
@@ -68,7 +68,7 @@ public class FileRedXML extends DefaultHandler{
 	public static void dom4jReadFileXML(){
 		long lasting = System.currentTimeMillis();
 		try {
-			File f = new File("D:\\waterSend\\parameter.xml");
+			File f = new File("D:\\parameter.xml");
 			SAXReader Read = new SAXReader();
 			org.dom4j.Document doc = Read.read(f);
 			Element root = doc.getRootElement();
@@ -95,7 +95,7 @@ public class FileRedXML extends DefaultHandler{
 		long lasting = System.currentTimeMillis();
 		try {
 			SAXBuilder builder = new SAXBuilder();
-			org.jdom2.Document doc = builder.build(new File("D:\\waterSend\\parameter.xml"));
+			org.jdom2.Document doc = builder.build(new File("D:\\parameter.xml"));
 			org.jdom2.Element foo = doc.getRootElement();
 			List allChildren = foo.getChildren();
 			for (int i = 0; i < allChildren.size(); i++) {
@@ -122,7 +122,7 @@ public class FileRedXML extends DefaultHandler{
 			SAXParserFactory sf = SAXParserFactory.newInstance();
 			SAXParser sp = sf.newSAXParser();
 			FileRedXML reader = new FileRedXML();
-			sp.parse(new InputSource("D:\\waterSend\\parameter.xml"),reader);
+			sp.parse(new InputSource("D:\\parameter.xml"),reader);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
