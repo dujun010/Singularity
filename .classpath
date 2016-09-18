@@ -15,5 +15,6 @@
 	<classpathentry kind="lib" path="lib/spring-web-3.2.0.RELEASE.jar"/>
 	<classpathentry kind="lib" path="lib/commons-logging-1.2.jar"/>
 	<classpathentry kind="lib" path="lib/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="lib/jxl-2.6.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
