@@ -17,7 +17,7 @@ import java.io.Reader;
  * 3.readFileByLines   以行为单位读取文件，常用于读面向行的格式化文件
  * 4.readFileByRandomAccess   随机读取文件内容
  * 5.showAvailableBytes       显示输入流中还剩的字节数
- * 
+ * 6.readFileOrDirectory	     读取文件和文件夹
  * @author djun
  *
  */
@@ -196,12 +196,33 @@ public class FileRead {
             e.printStackTrace();
         }
     }
+    /**
+     * 读取文件和文件夹
+     * @author djun
+     */
+	public static void readFileOrDirectory() {
+		String path = "D:\\waterSoftware\\DataSend\\config";
+		File file = new File(path);
+		File[] tempList = file.listFiles();
+		System.out.println("该目录下对象个数：" + tempList.length);
+		for (int i = 0; i < tempList.length; i++) {
+			if (tempList[i].isFile()) {
+				System.out.println("文     件：" + tempList[i]);
+			}
+			if (tempList[i].isDirectory()) {
+				System.out.println("文件夹：" + tempList[i]);
+			}
+		}
+	}
+    
+    
 
     public static void main(String[] args) {
-        String fileName = "C:/temp/newTemp.txt";
+        /*String fileName = "C:/temp/newTemp.txt";
         FileRead.readFileByBytes(fileName);
         FileRead.readFileByChars(fileName);
         FileRead.readFileByLines(fileName);
-        FileRead.readFileByRandomAccess(fileName);
+        FileRead.readFileByRandomAccess(fileName);*/
+        FileRead.readFileOrDirectory();
     }
 }
