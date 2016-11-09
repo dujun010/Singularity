@@ -13,6 +13,7 @@ import java.util.Properties;
 import javax.activation.DataHandler;
 import javax.activation.FileDataSource;
 import javax.mail.Address;
+import javax.mail.Authenticator;
 import javax.mail.BodyPart;
 import javax.mail.Message;
 import javax.mail.MessagingException;
@@ -24,6 +25,7 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
+
 
 
 import com.sun.xml.internal.messaging.saaj.packaging.mime.internet.MimeUtility;
@@ -77,8 +79,8 @@ public class MailSender {
 			smtpHost = "smtp.163.com";
 			smtpPort = "465";
 		}else if(mark.equals("@qq.com")){//qq企业邮箱
-			smtpHost = "smtp.exmail.qq.com";
-			smtpPort = "587";
+			smtpHost = "smtp.qq.com";
+			smtpPort = "465";
 		}else if(mark.equals("@yahoo.com")){//yahoo邮箱
 			smtpHost = "smtp.mail.yahoo.com";
 			smtpPort = "465";
@@ -170,10 +172,10 @@ public class MailSender {
         
         
         // 创建密码验证器
-        //Authenticator authenticator = new MailAuthenticator(username, password);
+        Authenticator authenticator = new MailAuthenticator(username, password);
         // 获取基于Properties Session对象
 
-        Session session = Session.getInstance(props, null);
+        Session session = Session.getInstance(props, authenticator);
         session.setDebug(false);
 
         // 根据Session创建一个邮件消息
@@ -276,6 +278,6 @@ public class MailSender {
 //                        null  //隐藏抄送
 //                        );
 //        System.out.println("------------sResult:"+sResult);
-    	MailSender.sendMail("dujun_dj@126.com", "测试发件人姓名", "13811300060", new String[]{"767855643@qq.com"}, "测试html", "<table border='1' bgColor='red'><tr><td>发送一个表格</td></tr></table>", null, null, null);
+    	MailSender.sendMail("13811300060@139.com", "测试发件人姓名", "dujun13811300060", new String[]{"dujun_dj@126.com"}, "测试html", "<table border='1' bgColor='red'><tr><td>发送一个表格</td></tr></table>", null, null, null);
     }
 }
