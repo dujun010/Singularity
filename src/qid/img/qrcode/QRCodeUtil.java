@@ -1,4 +1,4 @@
-package qid.QRCode;
+package qid.img.qrcode;
 
 import java.awt.BasicStroke;
 import java.awt.Graphics;

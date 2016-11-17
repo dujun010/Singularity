@@ -1,4 +1,4 @@
-package qid.QRCode;
+package qid.img.qrcode;
 
 import java.awt.Graphics2D;
 import java.awt.geom.AffineTransform;
