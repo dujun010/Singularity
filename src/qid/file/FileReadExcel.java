@@ -138,23 +138,10 @@ public class FileReadExcel {
 		for (int i = 0; i < list.size(); i++) {
 			List<String> row = list.get(i);
 			if(row.size() == 0 || row.get(0).getBytes().length != row.get(0).length()) continue;//过滤掉第一列以中文开头的列   所有字段列是以数字开头
-			String field = "<field name=\""+row.get(1)+"\" type=\""+TYPE.get(row.get(2))+"\" id=\""+0+"\" />";
 			for (int j = 0; j < row.size(); j++) {
 				System.out.print(row.get(j) + "\t");
 			}
-			System.out.println(field);
 		}
 	}
-	
-	
-	public static Map<String,String> TYPE = new HashMap<String,String>();
-	static{
-		TYPE.put("u8", "short");
-		TYPE.put("s8", "string");
-		TYPE.put("u16", "int");
-		TYPE.put("u32", "long");
-		TYPE.put("u64", "long");
-	}
-	
 
 }
