@@ -1,4 +1,4 @@
-package qid.file;
+package qid.file.shell;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
@@ -12,7 +12,7 @@ import ch.ethz.ssh2.Session;
 import ch.ethz.ssh2.StreamGobbler;
 
 /**
- * 执行shell脚本
+ * 执行远程服务器上的shell脚本
  * @author dujun
  *
  */
